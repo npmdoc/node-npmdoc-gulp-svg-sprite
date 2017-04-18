@@ -61,12 +61,138 @@
 
     <li class="apidocModuleLi"><a href="#apidoc.module.gulp-svg-sprite">module gulp-svg-sprite</a><ol>
 
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svg-sprite.gulp-svg-sprite">
+            function <span class="apidocSignatureSpan"></span>gulp-svg-sprite
+            <span class="apidocSignatureSpan">(config)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svg-sprite.toString">
+            function <span class="apidocSignatureSpan">gulp-svg-sprite.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.gulp-svg-sprite.toString">module gulp-svg-sprite.toString</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.gulp-svg-sprite.toString.toString">
+            function <span class="apidocSignatureSpan">gulp-svg-sprite.</span>toString
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
     </ol></li>
 
 </ol></div>
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.gulp-svg-sprite" id="apidoc.module.gulp-svg-sprite">module gulp-svg-sprite</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svg-sprite.gulp-svg-sprite" id="apidoc.element.gulp-svg-sprite.gulp-svg-sprite">
+        function <span class="apidocSignatureSpan"></span>gulp-svg-sprite
+        <span class="apidocSignatureSpan">(config)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function gulpSVGSprite(config) {
+
+	// Extend plugin error
+	function extendError(pError, error) {
+		if (error &#x26;&#x26; (typeof error === &#x27;object&#x27;)) {
+			[&#x27;name&#x27;, &#x27;errno&#x27;].forEach(function(property) {
+				if (property in error) {
+					this[property]	= error[property];
+				}
+			}, pError);
+		}
+
+		return pError;
+	}
+
+	// Instanciate spriter instance
+	var spriter						= new SVGSpriter(config);
+	var shapes						= 0;
+
+	// Intercept error log and convert to plugin errors
+	spriter.config.log.error		= function(message, error) {
+		this.emit(&#x27;error&#x27;, extendError(new PluginError(PLUGIN_NAME, message), error));
+	};
+
+	return through2.obj(function (file, enc, cb) {
+		var error					= null;
+		try {
+			spriter.add(file);
+			++shapes;
+		} catch(e) {
+			error					= (!e.plugin || (e.plugin !== PLUGIN_NAME)) ? extendError(new PluginError(PLUGIN_NAME, e.message), e) : e;
+		}
+		return cb(error);
+
+	}, function(cb) {
+		var stream 					= this;
+		spriter.compile(function(error, result /*, data*/){
+			if (error) {
+				stream.emit(&#x27;error&#x27;, new PluginError(PLUGIN_NAME, error));
+			} else if (shapes &#x3e; 0) {
+				for (var mode in result) {
+					for (var resource in result[mode]) {
+						stream.push(result[mode][resource]);
+					}
+				}
+			}
+			cb();
+		});
+	});
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svg-sprite.toString" id="apidoc.element.gulp-svg-sprite.toString">
+        function <span class="apidocSignatureSpan">gulp-svg-sprite.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">toString = function () {
+    return text;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.gulp-svg-sprite.toString" id="apidoc.module.gulp-svg-sprite.toString">module gulp-svg-sprite.toString</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.gulp-svg-sprite.toString.toString" id="apidoc.element.gulp-svg-sprite.toString.toString">
+        function <span class="apidocSignatureSpan">gulp-svg-sprite.</span>toString
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function toString() { [native code] }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 </div>
 
