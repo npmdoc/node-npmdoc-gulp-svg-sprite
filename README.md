@@ -1,9 +1,14 @@
-# api documentation for  [gulp-svg-sprite (v1.3.6)](https://github.com/jkphl/gulp-svg-sprite)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-svg-sprite.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-svg-sprite) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-svg-sprite.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-svg-sprite)
+# npmdoc-gulp-svg-sprite
+
+#### api documentation for  [gulp-svg-sprite (v1.3.6)](https://github.com/jkphl/gulp-svg-sprite)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-svg-sprite.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-svg-sprite) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-svg-sprite.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-svg-sprite)
+
 #### SVG sprites & stacks galore — Gulp plugin wrapping around svg-sprite that reads in a bunch of SVG files, optimizes them and creates SVG sprites and CSS resources in various flavours
 
-[![NPM](https://nodei.co/npm/gulp-svg-sprite.png?downloads=true)](https://www.npmjs.com/package/gulp-svg-sprite)
+[![NPM](https://nodei.co/npm/gulp-svg-sprite.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/gulp-svg-sprite)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-svg-sprite/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-gulp-svg-sprite_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-svg-sprite/build/apidoc.html)
+- [https://npmdoc.github.io/node-npmdoc-gulp-svg-sprite/build/apidoc.html](https://npmdoc.github.io/node-npmdoc-gulp-svg-sprite/build/apidoc.html)
+
+[![apidoc](https://npmdoc.github.io/node-npmdoc-gulp-svg-sprite/build/screenCapture.buildCi.browser.%252Ftmp%252Fbuild%252Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-gulp-svg-sprite/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-gulp-svg-sprite/build/screenCapture.npmPackageListing.svg)
 
@@ -18,7 +23,6 @@
 {
     "author": {
         "name": "Joschi Kuphal",
-        "email": "joschi@kuphal.net",
         "url": "https://jkphl.is"
     },
     "bugs": {
@@ -87,13 +91,11 @@
     "license": "MIT",
     "maintainers": [
         {
-            "name": "jkphl",
-            "email": "joschi@kuphal.net"
+            "name": "jkphl"
         }
     ],
     "name": "gulp-svg-sprite",
     "optionalDependencies": {},
-    "readme": "ERROR: No README data found!",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/jkphl/gulp-svg-sprite.git"
@@ -105,16 +107,6 @@
     "version": "1.3.6"
 }
 ```
-
-
-
-# <a name="apidoc.tableOfContents"></a>[table of contents](#apidoc.tableOfContents)
-
-#### [module gulp-svg-sprite](#apidoc.module.gulp-svg-sprite)
-
-
-
-# <a name="apidoc.module.gulp-svg-sprite"></a>[module gulp-svg-sprite](#apidoc.module.gulp-svg-sprite)
 
 
 
