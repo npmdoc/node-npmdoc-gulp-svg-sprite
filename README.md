@@ -1,6 +1,6 @@
 # npmdoc-gulp-svg-sprite
 
-#### api documentation for  [gulp-svg-sprite (v1.3.6)](https://github.com/jkphl/gulp-svg-sprite)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-svg-sprite.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-svg-sprite) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-svg-sprite.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-svg-sprite)
+#### basic api documentation for  [gulp-svg-sprite (v1.3.6)](https://github.com/jkphl/gulp-svg-sprite)  [![npm package](https://img.shields.io/npm/v/npmdoc-gulp-svg-sprite.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-gulp-svg-sprite) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-gulp-svg-sprite.svg)](https://travis-ci.org/npmdoc/node-npmdoc-gulp-svg-sprite)
 
 #### SVG sprites & stacks galore — Gulp plugin wrapping around svg-sprite that reads in a bunch of SVG files, optimizes them and creates SVG sprites and CSS resources in various flavours
 
@@ -104,7 +104,8 @@
         "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
         "test": "gulp && istanbul test _mocha --report html -- test/*.js --reporter spec"
     },
-    "version": "1.3.6"
+    "version": "1.3.6",
+    "bin": {}
 }
 ```
 
